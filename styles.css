@@ -1,0 +1,283 @@
+/* General Styles */
+
+* { 
+    margin: 0;
+    padding: 0;
+    border-style: none;
+}
+body { 
+    background-color: white;
+}
+
+/* Button Styles */
+
+#mainContent button { 
+    width: 14.4em;
+    height: 2em;
+    background-color: red;
+    color: white;
+}
+#mainContent button:hover { 
+    background-color: beige;
+    color: red;
+}
+
+/* Image Styles */
+img:hover { 
+    width: 13em;
+    height: 13em;
+}
+
+
+
+/* Navigation */
+
+ul { 
+    position: fixed;
+    top:0%;
+    left:0%;
+    background-color: red;
+    width: 100%;
+    height: 6%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 8mm;
+     list-style: none;
+     z-index: 1;
+     color: beige;
+}
+#cartLogo { 
+    position: fixed;
+    right: 1%;
+    font-size: 7mm;
+    top:1%;
+    color: white;
+}
+#cartLogo:hover { 
+    color: cornflowerblue;
+}
+#settingsLogo { 
+    position: fixed;
+    right: 4%;
+    font-size: 7mm;
+    top:1%;
+    color: white;
+}
+#settingsLogo:hover { 
+    color: cornflowerblue;
+}
+a { 
+display: flex;
+text-align: center;
+margin-left: 60px;
+text-decoration: none;
+color: beige;
+}
+a:hover { 
+    color: cornflowerblue;
+}
+
+/* Left Div */
+#leftDiv { 
+    position: fixed;
+    left:0%;
+    top:6%;
+    background-color: beige;
+    height: 100%;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#compName { 
+    display: flex;
+    justify-content: flex-start;
+    font-size: 11mm;
+}
+
+
+#logo { 
+    font-size: 40mm;
+    display: flex;
+}
+
+
+/* Featured Products */
+
+#fetured { 
+    position: absolute;
+    top:25%;
+    left:35%;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* Background color for size refernce */
+    background-color: black;
+    opacity: 85%;
+    z-index: -1;
+}
+#feturedSubHead { 
+    position: absolute;
+    top:35%;
+    left: 46%;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    color: white;
+    font-size: 11mm;
+}
+#fetured img { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 6em;
+    width: 12em;
+    height: 12em;
+} 
+
+/* Featured Divs */
+#fet1 button,#fet2 button, #fet3 button { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#fet1 { 
+    margin-left: 5em;
+}
+h2 { 
+    position: absolute;
+    top:15%;
+    left:40%;
+    font-size: 11mm;
+}
+
+/* End of featured section */
+
+
+
+
+/* New Arrivals */
+
+#newArrived { 
+    position: absolute;
+    left:35%;
+    top:190%;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    opacity: 85%;
+}
+#newArrivedSubHead { 
+    position: absolute;
+    top:200%;
+    left: 55%;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    color: white;
+    font-size: 11mm;
+}
+#newArrived img { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 6em;
+    width: 12em;
+    height: 12em;
+}
+#arriv1 button,#arriv2 button, #arriv3 button { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#arriv1 { 
+    margin-left: 5em;
+}
+h3 { 
+    position: absolute;
+    top:180%;
+    left:40%;
+    font-size: 11mm;
+}
+
+
+/* Main Products */
+#mainStock { 
+    position: absolute;
+    top:320%;
+    left:35%;
+    width: 65%;
+    height: 300%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* Background color for size refernce */
+    background-color: black;
+    opacity: 85%;
+    z-index: -1;
+}
+#mainStockSubHead { 
+    position: absolute;
+    top:370%;
+    left:55%;
+    font-size: 12mm;
+    color: beige;
+}
+#mainStock img { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 6em;
+    margin-top: 7em;
+    width: 12em;
+    height: 12em;
+}
+
+#stock1 button, #stock2 button,#stock3 button, 
+#stock4 button, #stock5 button,#stock6 button,
+#stock7 button, #stock8 button,#stock9 button { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#stock1,#stock2,#stock3   { 
+    margin-left: 5em;
+}
+
+
+/* Footer */
+#foot { 
+    position: absolute;
+    top:600%;
+    left:35%;
+    width: 65%;
+    background-color: red;
+    z-index: 1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    list-style: none;
+    flex-direction: column;
+}
+#contact { 
+    font-size: 6mm;
+}
+#devCredit { 
+    font-size: 6mm;
+
+}

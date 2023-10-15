@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/e68c61fca7.js" crossorigin="anonymous"></script>
+    <script src="./Cart/cart.js"></script>
+    <script defer src="main.js"></script>
+    <title>E Shop Template</title>
+</head>
+<body>
+    
+
+<!-- Header -->
+<header id="frontHeader">E Commerce Shop</header>
+
+
+<!-- Navigation -->
+<nav> 
+    <ul> 
+        <li><a href="#sec1">Home</a></li>
+        <li><a href="#sec2">New Arrivals</a></li>
+        <li><a href="#sec3">Our Products</a></li>
+        <button id="cart"><i id="cartLogo" class="fa-solid fa-cart-shopping"></i></button>
+        <button id="settingsBtn" type="button"><i id="settingsLogo" class="fa-solid fa-gears"></i></button>
+        </ul>
+</nav>
+<!-- Main Content-->
+
+
+<div id="mainContent">
+
+<!-- Left Section -->
+<div id="leftDiv">
+    <i id="logo" class="fa-solid fa-chart-simple"></i>
+    <header id="compName">Your Company Name Here!</header>
+</div>
+
+ <div id="sec1">
+    <!-- Fetured Products -->
+    <h2>Featured Products:</h2>
+    <header id="feturedSubHead">We Saw These And Thought Of You!</header>
+    <div id="fetured">
+        <div id="fet1">
+        <img id="fetProd1" src="./images/placeholder.jpg"/>
+        <p class="price">Price: $150</p>
+        <button type="button" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div id="fet2">
+            <img id="fetProd2" src="./images/placeholder.jpg"/>
+        <p class="price">Price: $50</p>
+        <button class="cartBtn" type="button">Add to Cart</button>
+        </div>
+        <div id="fet3">
+            <img id="fetProd3" src="./images/placeholder.jpg"/>
+        <p class="price">Price: $79</p>
+        <button class="cartBtn" type="button">Add to Cart</button>
+        </div>
+        </div>
+    </div>
+
+    <div id="sec2">
+
+
+        <!-- New Arrivals -->
+        <h3>New Arrivals:</h3>
+        <header id="newArrivedSubHead">We Just Got These In!</header>
+        <div id="newArrived">
+      
+            <div id="arriv1">
+                <img id="prodImage1" src="./images/placeholder.jpg"/>
+                <p class="price">Price: $89</p>
+                <button class="cartBtn" type="button">Add to Cart</button>
+            </div>
+            <div id="arriv2">
+                <img id="prodImage2" src="./images/placeholder.jpg"/>
+                <p class="price">Price: $39.99</p>
+                <button class="cartBtn" type="button">Add to Cart</button>
+            </div>
+            <div id="arriv3">
+                <img id="prodImage3" src="./images/placeholder.jpg"/>
+                <p class="price">Price: $39.99</p>
+                <button class="cartBtn" type="button">Add to Cart</button>
+            </div>
+        </div>
+
+         
+        <!-- Main Products -->
+        <div id="sec3">
+        <h4>Our Stock</h4>
+        <header id="mainStockSubHead">Our Main Stock Is here!</header>
+        <div id="mainStock">
+            <div id="stockPics1">
+            <div id="stock1">
+                <img id="stockImage1" src="./images/placeholder.jpg"/>
+                <p class="price">Price: $89</p>
+                <button class="cartBtn" type="button">Add to Cart</button>
+            </div>
+            <div id="stock2">
+                <img id="stockImage2" src="./images/placeholder.jpg"/>
+                <p class="price">Price: $39.99</p>
+                <button class="cartBtn" type="button">Add to Cart</button>
+            </div>
+            <div id="stock3">
+                <img id="stockImage3" src="./images/placeholder.jpg"/>
+                <p class="price">Price: $39.99</p>
+                <button class="cartBtn" type="button">Add to Cart</button>
+                </div>
+                </div>
+                <!-- Stock Pics 2 -->
+
+                <div id="stockPics2">
+                    <div id="stock4">
+                        <img id="stockImage4" src="./images/placeholder.jpg"/>
+                        <p class="price">Price: $89</p>
+                        <button class="cartBtn" type="button">Add to Cart</button>
+                    </div>
+                    <div id="stock5">
+                        <img id="stockImage5" src="./images/placeholder.jpg"/>
+                        <p class="price">Price: $39.99</p>
+                        <button class="cartBtn" type="button">Add to Cart</button>
+                    </div>
+                    <div id="stock6">
+                        <img id="stockImage6" src="./images/placeholder.jpg"/>
+                        <p class="price">Price: $39.99</p>
+                        <button class="cartBtn" type="button">Add to Cart</button>
+                        </div>
+            </div>
+
+            <!-- Stock Pics 3 -->
+            <div id="stockPics3">
+                <div id="stock7">
+                    <img id="stockImage7" src="./images/placeholder.jpg"/>
+                    <p class="price">Price: $89</p>
+                    <button class="cartBtn" type="button">Add to Cart</button>
+                </div>
+                <div id="stock8">
+                    <img id="stockImage8" src="./images/placeholder.jpg"/>
+                    <p class="price">Price: $39.99</p>
+                    <button class="cartBtn" type="button">Add to Cart</button>
+                </div>
+                <div id="stock9">
+                    <img id="stockImage9" src="./images/placeholder.jpg"/>
+                    <p class="price">Price: $39.99</p>
+                    <button class="cartBtn" type="button">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer> 
+                <div id="foot">
+                    <header id="contact">Contact Us!</header>
+                    <li><a href="linktocontact.com">Send Email</a></li>
+                    <li><a href="linktocontact.com">Other </a></li>
+                    <li><a href="linktocontact.com">Call Us </a></li>
+                    <header id="devCredit">Devolped by Johno</header>
+                    <li><a href="linktodevpage.com">Contact Devoloper</a></li>
+                </div>
+
+            </footer>
+
+
+        
+
+
+
+
+ </div>
+</
+
+
+</body>
+</html>
