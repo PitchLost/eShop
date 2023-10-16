@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/e68c61fca7.js" crossorigin="anonymous"></script>
-    <script src="./Cart/cart.js"></script>
+  
     <script defer src="main.js"></script>
     <title>E Shop Template</title>
 </head>
@@ -19,14 +19,16 @@
 <!-- Navigation -->
 <nav> 
     <ul> 
-        <li><a href="#sec1">Home</a></li>
-        <li><a href="#sec2">New Arrivals</a></li>
-        <li><a href="#sec3">Our Products</a></li>
+        <li><a href="#fetured">Home</a></li>
+        <li><a href="#newArrived">New Arrivals</a></li>
+        <li><a href="#mainStock">Our Products</a></li>
         <button id="cart"><i id="cartLogo" class="fa-solid fa-cart-shopping"></i></button>
         <button id="settingsBtn" type="button"><i id="settingsLogo" class="fa-solid fa-gears"></i></button>
         </ul>
 </nav>
 <!-- Main Content-->
+<!-- Cart -->
+
 
 
 <div id="mainContent">
@@ -43,19 +45,24 @@
     <header id="feturedSubHead">We Saw These And Thought Of You!</header>
     <div id="fetured">
         <div id="fet1">
+            <div class="carryOver">
         <img id="fetProd1" src="./images/placeholder.jpg"/>
         <p class="price">Price: $150</p>
-        <button type="button" onclick="addToCart()">Add to Cart</button>
+        <button class="cartBtn" type="button" >Add to Cart</button>
+        <button class="cartRemove" type="button">Remove</button>
+        </div>
         </div>
         <div id="fet2">
             <img id="fetProd2" src="./images/placeholder.jpg"/>
         <p class="price">Price: $50</p>
         <button class="cartBtn" type="button">Add to Cart</button>
+        <button class="cartRemove" type="button">Remove</button>
         </div>
         <div id="fet3">
             <img id="fetProd3" src="./images/placeholder.jpg"/>
         <p class="price">Price: $79</p>
         <button class="cartBtn" type="button">Add to Cart</button>
+        <button class="cartRemove" type="button">Remove</button>
         </div>
         </div>
     </div>
@@ -72,16 +79,19 @@
                 <img id="prodImage1" src="./images/placeholder.jpg"/>
                 <p class="price">Price: $89</p>
                 <button class="cartBtn" type="button">Add to Cart</button>
+                <button class="cartRemove" type="button">Remove</button>
             </div>
             <div id="arriv2">
                 <img id="prodImage2" src="./images/placeholder.jpg"/>
                 <p class="price">Price: $39.99</p>
                 <button class="cartBtn" type="button">Add to Cart</button>
+                <button class="cartRemove" type="button">Remove</button>
             </div>
             <div id="arriv3">
                 <img id="prodImage3" src="./images/placeholder.jpg"/>
                 <p class="price">Price: $39.99</p>
                 <button class="cartBtn" type="button">Add to Cart</button>
+                <button class="cartRemove" type="button">Remove</button>
             </div>
         </div>
 
@@ -96,16 +106,19 @@
                 <img id="stockImage1" src="./images/placeholder.jpg"/>
                 <p class="price">Price: $89</p>
                 <button class="cartBtn" type="button">Add to Cart</button>
+                <button class="cartRemove" type="button">Remove</button>
             </div>
             <div id="stock2">
                 <img id="stockImage2" src="./images/placeholder.jpg"/>
                 <p class="price">Price: $39.99</p>
                 <button class="cartBtn" type="button">Add to Cart</button>
+                <button class="cartRemove" type="button">Remove</button>
             </div>
             <div id="stock3">
                 <img id="stockImage3" src="./images/placeholder.jpg"/>
                 <p class="price">Price: $39.99</p>
                 <button class="cartBtn" type="button">Add to Cart</button>
+                <button class="cartRemove" type="button">Remove</button>
                 </div>
                 </div>
                 <!-- Stock Pics 2 -->
@@ -115,16 +128,19 @@
                         <img id="stockImage4" src="./images/placeholder.jpg"/>
                         <p class="price">Price: $89</p>
                         <button class="cartBtn" type="button">Add to Cart</button>
+                        <button class="cartRemove" type="button">Remove</button>
                     </div>
                     <div id="stock5">
                         <img id="stockImage5" src="./images/placeholder.jpg"/>
                         <p class="price">Price: $39.99</p>
                         <button class="cartBtn" type="button">Add to Cart</button>
+                        <button class="cartRemove" type="button">Remove</button>
                     </div>
                     <div id="stock6">
                         <img id="stockImage6" src="./images/placeholder.jpg"/>
                         <p class="price">Price: $39.99</p>
                         <button class="cartBtn" type="button">Add to Cart</button>
+                        <button class="cartRemove" type="button">Remove</button>
                         </div>
             </div>
 
@@ -134,32 +150,41 @@
                     <img id="stockImage7" src="./images/placeholder.jpg"/>
                     <p class="price">Price: $89</p>
                     <button class="cartBtn" type="button">Add to Cart</button>
+                    <button class="cartRemove" type="button">Remove</button>
                 </div>
                 <div id="stock8">
                     <img id="stockImage8" src="./images/placeholder.jpg"/>
                     <p class="price">Price: $39.99</p>
                     <button class="cartBtn" type="button">Add to Cart</button>
+                    <button class="cartRemove" type="button">Remove</button>
                 </div>
                 <div id="stock9">
                     <img id="stockImage9" src="./images/placeholder.jpg"/>
                     <p class="price">Price: $39.99</p>
                     <button class="cartBtn" type="button">Add to Cart</button>
+                    <button class="cartRemove" type="button">Remove</button>
                     </div>
                 </div>
             </div>
+    <script defer src="./Cart/cart.js" async></script>
 
-            <!-- Footer -->
-            <footer> 
-                <div id="foot">
-                    <header id="contact">Contact Us!</header>
-                    <li><a href="linktocontact.com">Send Email</a></li>
-                    <li><a href="linktocontact.com">Other </a></li>
-                    <li><a href="linktocontact.com">Call Us </a></li>
-                    <header id="devCredit">Devolped by Johno</header>
-                    <li><a href="linktodevpage.com">Contact Devoloper</a></li>
+    
+
+
+            <!-- Cart -->
+
+            <header id="cartHead">Your Cart</header>
+            <button type="button" class="purchaseBtn">Checkout!</button>
+          <div id="cart-items">
+          
+                <div id="cartContainer">
+                    <div id="cartItems">
+
+                    </div>
+                </div>
                 </div>
 
-            </footer>
+        
 
 
         
@@ -168,7 +193,7 @@
 
 
  </div>
-</
+
 
 
 </body>
