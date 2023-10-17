@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/e68c61fca7.js" crossorigin="anonymous"></script>
-  
+
+
+
+<!-- Link Scripts to DOM -->
+
     <script defer src="main.js"></script>
+    <script defer src="./Settings/settings.js"></script>
     <title>E Shop Template</title>
 </head>
 <body>
@@ -23,7 +28,7 @@
         <li><a href="#newArrived">New Arrivals</a></li>
         <li><a href="#mainStock">Our Products</a></li>
         <button id="cart"><i id="cartLogo" class="fa-solid fa-cart-shopping"></i></button>
-        <button id="settingsBtn" type="button"><i id="settingsLogo" class="fa-solid fa-gears"></i></button>
+        <button id="settingsBtn" type="button"><i id="settingsLogo" class="fa-solid fa-gears" onclick="openSettings()"></i></button>
         </ul>
 </nav>
 <!-- Main Content-->
