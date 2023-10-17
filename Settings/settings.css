@@ -7,6 +7,25 @@ body {
     margin: 0;
     border-style: none;
 }
+#backBtn { 
+    position: fixed;
+    top:4%;
+    left:3%;
+    font-size: 7mm;
+}
+#backBtn:hover { 
+    color: gray;
+}
+#setLeftDiv { 
+    position: fixed;
+    top:14%;
+    left: 0%;
+    height: 86%;
+    width: 9%;
+    background-color: transparent;
+    border-right-style:solid ;
+    border-width: thin;
+}
 
 #darkMode { 
     position: absolute;
@@ -20,6 +39,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+h2 { 
+    position: absolute;
+    left:15%;
+    top:15%;
+
 }
 #darkModeHead { 
     position: absolute;

@@ -1,5 +1,12 @@
 const darkToggle = document.getElementById('toggleDark')
 
+// Go back Button
+const backBtn = document.getElementById('goBack')
+backBtn.addEventListener('click',e => { 
+    window.location.href('../index.html')
+})
+
+
 // Boolien to track if dark mode is on or not
 let darkOn = false
 
