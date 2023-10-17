@@ -275,6 +275,9 @@ h3 {
         flex-direction: column;
     }
     
+    .cartRemove { 
+        display: none;
+    }
 
 #cartItems button { 
     width: 5em;
