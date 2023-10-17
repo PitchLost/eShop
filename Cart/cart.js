@@ -14,7 +14,14 @@ addBtn.forEach(button => {
   button.addEventListener('click', e => { 
     let activeBtn = e.target;
     let rowContents = activeBtn.parentElement;
-    let dupeItem = rowContents.cloneNode(true);
+    let dupeItem = rowContents.cloneNode(true); 
+
+ // Set CSS styles to control the layout
+ dupeItem.style.display = 'flex'; // Display items in a flex container
+ dupeItem.style.flexDirection = 'column'; // Items stacked vertically
+ dupeItem.style.marginBottom = '100px'; // Add some space between items
+
+
     cartItemRow.appendChild(dupeItem);
 
     // Store a reference to the cloned item in the array
