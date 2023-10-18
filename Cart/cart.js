@@ -19,7 +19,7 @@ addBtn.forEach(button => {
  // Set CSS styles to control the layout
  dupeItem.style.display = 'flex'; // Display items in a flex container
  dupeItem.style.flexDirection = 'column'; // Items stacked vertically
- dupeItem.style.marginBottom = '100px'; // Add some space between items
+ dupeItem.style.marginBottom = '10em'; // Add some space between items
 
 
     cartItemRow.appendChild(dupeItem);
@@ -39,6 +39,7 @@ addBtn.forEach(button => {
     });
   });
 });
+
 
 // Function to remove a cloned item
 function removeClonedItem(item) {

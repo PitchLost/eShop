@@ -270,7 +270,7 @@ h3 {
         position: absolute;
         left: 10%;
         top: 20%;
-        margin-bottom: 2em;
+        margin-bottom: 10em;
         display: flex;
         flex-direction: column;
     }
@@ -286,7 +286,7 @@ h3 {
     position: absolute;
     left:30%;
     top:25%;
-    margin-bottom: 2em;
+    margin-bottom: 10em;
     display: flex;
     flex-direction: column;
     visibility: visible ;
@@ -296,7 +296,7 @@ h3 {
     position: absolute;
     top:25%;
     left:45%;
-    margin-bottom: 2em;
+    margin-bottom: 10em;
     display: flex;
     flex-direction: column;
 }
