@@ -9,6 +9,25 @@ let cartItemRow = document.getElementById('cartItems'); // Assuming 'cartItems' 
 // Array to store references to cloned items
 let clonedItems = [];
 
+
+
+// ! EXPERERIMENTAL !!!! 
+
+let cartItem1 = document.getElementById('cartItem1');
+let cartItem1filled = false;
+let cartItem2 = document.getElementById('cartItem2');
+let cartItem2filled = false;
+let cartItem3 = document.getElementById('cartItem3');
+let cartItem3filled = false;
+let cartItem4 = document.getElementById('cartItem4');
+let cartItem4filled = false;
+let cartItem5 = document.getElementById('cartItem5');
+let cartItem5filled = false;
+
+
+
+
+
 // Add event listener to each "Add to Cart" button
 addBtn.forEach(button => {
   button.addEventListener('click', e => { 
@@ -21,8 +40,25 @@ addBtn.forEach(button => {
  dupeItem.style.flexDirection = 'column'; // Items stacked vertically
  dupeItem.style.marginBottom = '10em'; // Add some space between items
 
-
-    cartItemRow.appendChild(dupeItem);
+ if (cartItem1filled == false) { 
+  cartItem1.appendChild(dupeItem);
+  cartItem1filled = true
+ } else if (cartItem2filled == false) { 
+  cartItem2.appendChild(dupeItem);
+  cartItem2filled = true
+ } else if (cartItem3filled == false) { 
+  cartItem3.appendChild(dupeItem);
+  cartItem3filled = true
+ } else if (cartItem4filled == false) { 
+  cartItem4.appendChild(dupeItem);
+  cartItem4filled = true
+ } else if (cartItem5filled == false) { 
+  cartItem5.appendChild(dupeItem);
+  cartItem5filled = true
+ }
+   
+   
+   
 
     // Store a reference to the cloned item in the array
     clonedItems.push(dupeItem);

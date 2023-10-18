@@ -337,3 +337,18 @@ h3 {
     z-index: 998;
 
 }
+
+
+/* Cart Items */
+#cartItem1 { 
+    width: 60%;
+    height: 20%;
+    position: absolute;
+    top:7%;
+}
+#cartItem2 { 
+    width: 60%;
+    height: 20%;
+    position: absolute;
+    top:57%;
+}
