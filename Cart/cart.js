@@ -43,18 +43,28 @@ addBtn.forEach(button => {
  if (cartItem1filled == false) { 
   cartItem1.appendChild(dupeItem);
   cartItem1filled = true
+  cartItemRow.style.height = '40%'
+  cartItem1.style.display = 'block'
  } else if (cartItem2filled == false) { 
   cartItem2.appendChild(dupeItem);
-  cartItem2filled = true
+  cartItem2filled = true;
+  cartItemRow.style.height = '60%'
+  cartItem2.style.display = 'block'
  } else if (cartItem3filled == false) { 
   cartItem3.appendChild(dupeItem);
   cartItem3filled = true
+  cartItemRow.style.height = '80%'
+  cartItem3.style.display = 'block'
  } else if (cartItem4filled == false) { 
   cartItem4.appendChild(dupeItem);
   cartItem4filled = true
+  cartItemRow.style.height = '100%'
+  cartItem4.style.display = 'block'
  } else if (cartItem5filled == false) { 
   cartItem5.appendChild(dupeItem);
   cartItem5filled = true
+  cartItemRow.style.height = '120%'
+  cartItem5.style.display = 'flex'
  }
    
    
