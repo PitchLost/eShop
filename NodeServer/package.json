@@ -1,0 +1,27 @@
+{
+    "name": "nodeserver",
+    "version": "1.0.0",
+    "description": "LBOE",
+    "main": "server.mjs",
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "corepack": "^0.18.0",
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "http": "^0.0.1-security",
+        "mongodb": "^6.1.0",
+        "mongoose": "^7.6.3",
+        "npm": "^9.6.7",
+        "socket.io": "^4.7.2",
+        "socket.io-client": "^4.7.2",
+        "websocket": "^1.0.34"
+    },
+    "scripts": {
+        "serverinit": "nodemon server.js"
+    },
+    "author": "Johno Doe",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    }
+}
