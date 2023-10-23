@@ -1,6 +1,8 @@
 const darkToggle = document.getElementById('toggleDark')
 
 // Go back Button
+
+/*
 const backBtn = document.getElementById('goBack')
 backBtn.addEventListener('click',e => { 
     window.location.href('../index.html')
@@ -50,3 +52,5 @@ allText.forEach(element => {
 
     }
 })
+
+*/

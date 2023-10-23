@@ -11,3 +11,20 @@ html {
 body { 
     background-color: white;
 }
+header { 
+    display: flex;
+    text-align: center;
+}
+
+#centerDivFullHeight { 
+    position: absolute;
+    top:0%;
+    left:35%;
+    height: 400%;
+    width: 65%;
+    background-color: transparent;
+    z-index: -999;
+    display: flex;
+    text-align: center;
+
+}

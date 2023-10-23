@@ -1,4 +1,18 @@
 
+/* Price Style */
+
+
+
+
+.price { 
+    display: flex;
+    color: white;
+    margin-bottom: 2em;
+    font-size: 7mm;
+    text-align: center;
+}
+
+
 /* New Arrivals */
 
 #newArrived { 
@@ -43,7 +57,7 @@
 h3 { 
     position: absolute;
     top:180%;
-    left:40%;
+    left:60%;
     font-size: 11mm;
 }
 
@@ -67,7 +81,7 @@ h3 {
 #mainStockSubHead { 
     position: absolute;
     top:370%;
-    left:55%;
+    left:50%;
     font-size: 12mm;
     color: beige;
 }
@@ -166,7 +180,7 @@ img:hover {
 #feturedSubHead { 
     position: absolute;
     top:35%;
-    left: 46%;
+    left: 60%;
     display: flex;
     justify-content: center;
     z-index: 2;
