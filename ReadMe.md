@@ -4,3 +4,7 @@
 
 
 // ____ to end comments
+
+
+For Full Plan 
+https://trello.com/b/pilnJVYU/eshop

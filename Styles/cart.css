@@ -1,0 +1,123 @@
+
+#cartItems button { 
+    width: 5em;
+    height: 3em;
+    position: absolute;
+    left:30%;
+    top:25%;
+    margin-bottom: 10em;
+    display: flex;
+    flex-direction: column;
+    visibility: visible ;
+    margin-left: 5em;
+}
+#cartItems p { 
+    font-size: 1.5em;
+    position: absolute;
+    top:25%;
+    left:45%;
+    margin-bottom: 10em;
+    margin-left: 5em;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Cart */
+#cartItems { 
+    position: absolute;
+    top:600%;
+    left:35%;
+    width: 65%;
+    background-color: cornflowerblue;
+    z-index: 1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    list-style: none;
+    flex-direction: column;
+}
+.purchaseBtn { 
+    position: absolute;
+    top:600%;
+    left:60%;
+    z-index: 999;
+    background-color: black;
+    width: 5em;
+    height: 4em;
+    display: flex;
+    text-align: center;
+}
+#cartItems img { 
+   
+    width: 7em;
+    height: 7em;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    margin-bottom: 10em;
+    display: flex;
+    flex-direction: column;
+}
+
+.cartRemove { 
+    display: none;
+    visibility: hidden;
+}
+
+
+
+#cartHead { 
+    font-size: 12mm;
+    position: absolute;
+    top:589%;
+    left:60%;
+    color: white;
+    z-index: 998;
+
+}
+
+
+/* Cart Items */
+#cartItem1 { 
+    width: 60%;
+    height: 20%;
+    position: absolute;
+    top:10%;
+    display: none;
+
+}
+#cartItem2 { 
+    width: 60%;
+    height: 20%;
+    position: absolute;
+    top:60%;
+    display: none;
+
+}
+#cartItem3 { 
+    width: 60%;
+    height: 20%;
+    position: absolute;
+    top:110%;
+    display: none;
+
+}
+#cartItem4 { 
+    width: 60%;
+    height: 20%;
+    position: absolute;
+    top:160%;
+    display: none;
+
+}
+#cartItem5 { 
+    width: 60%;
+    height: 20%;
+    position: absolute;
+    top:210%;
+    display: none;
+}
+

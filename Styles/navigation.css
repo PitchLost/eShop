@@ -1,0 +1,48 @@
+
+/* Navigation */
+
+ul { 
+    position: fixed;
+    top:0%;
+    left:0%;
+    background-color: red;
+    width: 100%;
+    height: 6%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 8mm;
+     list-style: none;
+     z-index: 1;
+     color: beige;
+}
+#cartLogo { 
+    position: fixed;
+    right: 1%;
+    font-size: 7mm;
+    top:1%;
+    color: white;
+}
+#cartLogo:hover { 
+    color: cornflowerblue;
+}
+#settingsLogo { 
+    position: fixed;
+    right: 4%;
+    font-size: 7mm;
+    top:1%;
+    color: white;
+}
+#settingsLogo:hover { 
+    color: cornflowerblue;
+}
+a { 
+display: flex;
+text-align: center;
+margin-left: 60px;
+text-decoration: none;
+color: beige;
+}
+a:hover { 
+    color: cornflowerblue;
+}
