@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="login.js"></script>
     <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../Styles/navigation.css">
     <title>Login | eShop</title>
 </head>
 <body>
@@ -30,10 +30,10 @@
 
     <div id="wrapper"></div>
     
-    <form id="loginForm" method="post"> 
+    <form id="loginForm" method="get"> 
 
             <header id="loginHead">Sign In</header>
-        <input type="text" placeholder="Username" id="usernameInput" name="username"> 
+        <input type="text" placeholder="Username" id="usernameInput" name="username" autocomplete="off"> 
         <input type="password" placeholder="Password" id="passwordInput" name="password"> 
         <button type="submit" id="enterBtn" name="enterButton">Sign in</button>
         <li><a href="createacc.html" id="noacc">No Account? Sign Up here</a></li>
