@@ -103,3 +103,16 @@ a:hover {
     background-color: transparent;
     color: white;
 }
+#pfp { 
+    position: fixed;
+    right: 8%;
+    top:4%;
+    font-size: 7mm;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+#pfp:hover { 
+    color: cornflowerblue;
+}
