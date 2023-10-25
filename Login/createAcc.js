@@ -11,15 +11,14 @@ const loginForm = document.getElementById('loginForm')
 
 async function sendData(username, password) {
     console.log('Post Requested');
-    const formData = new FormData();
-    formData.append('username', username);
-    formData.append('password', password);
-    console.log('Form data value:', formData);
+    const formContents = document.createElement('div');
+    formContents.append(userName.value, passWord.value)
+    console.log(formContents)
 
     try {
-        const response = await fetch('/NodeServer/server.mjs/createAcc', {
+        let response = await fetch('http://localhost:5500/NodeServer/server.mjs/createAcc', {
             method: 'POST',
-            body: formData,
+            body: formContents.value,
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
@@ -29,6 +28,7 @@ async function sendData(username, password) {
         
         if (response.ok) {
             console.log('Action seen');
+            console.log('Response is',response)
         } else {
             console.error('ERR 999 Response failed');
         }

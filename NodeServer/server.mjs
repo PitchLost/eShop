@@ -1,6 +1,8 @@
 import express from 'express';
 import http from 'http';
 import { Server } from 'socket.io';
+import cors from 'cors';
+
 
 
 console.log('Server code loaded');
@@ -8,14 +10,32 @@ console.log('Server code loaded');
 const app = express();
 const port = 5500;
 
-// Middleware for parsing form data
-app.use(express.urlencoded({ extended: true }));
+
+// Cors
+
+// Enable CORS middleware
+app.use(cors({
+  origin: 'http://127.0.0.1:5500/Login/createAcc.js', 
+  methods: 'GET, POST, OPTIONS', 
+  allowedHeaders: 'Content-Type, my-custom-header', 
+  credentials: true,  
+}));
+
+
+
+
 
 // Logging middleware to log all incoming requests
 app.use((req, res, next) => {
   console.log('Request received:', req.method, req.url);
-  next();
+  res.header('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
 });
+
+// Middleware for parsing form data
+app.use(express.urlencoded({ extended: true }));
 
 // Define the route for handling POST requests
 app.post('/NodeServer/server.mjs/createAcc', (req, res) => {
@@ -24,6 +44,7 @@ app.post('/NodeServer/server.mjs/createAcc', (req, res) => {
 
   let dataToSend = req.body;
   console.log('Data received in the request:', dataToSend);
+  console.log(req.body)
 
   // MongoDB code here
 
@@ -44,7 +65,7 @@ const uri = "mongodb+srv://Johno:FrQI1BKarDHkhyDV@cluster0.ngvjmi1.mongodb.net/?
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: '*',
+    origin: 'http://127.0.0.1:5500/',
     methods: ['POST','GET','OPTIONS'],
     allowedHeaders: ['Content-Type', 'my-custom-header'],
     credentials: true,

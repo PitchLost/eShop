@@ -126,6 +126,3 @@ cors: {
 
 
 // Cors 
-import cors from 'cors';
-// Apply the CORS middleware
-app.use(cors());
