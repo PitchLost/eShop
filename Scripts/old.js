@@ -104,3 +104,28 @@ app.post('/NodeServer/login', (req, res) => {
   console.log('The incoming req is from', clientIP);
   res.json({ message: 'Received a POST request', data: req.body });
 });
+
+
+
+
+
+
+/*
+cors: {
+  origin: '*',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'my-custom-header'],
+  credentials: true,
+},
+*/
+
+
+
+
+
+
+
+// Cors 
+import cors from 'cors';
+// Apply the CORS middleware
+app.use(cors());

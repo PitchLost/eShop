@@ -2,7 +2,12 @@ document.addEventListener('DOMContentLoaded',e => {
 
 let userName = document.getElementById('usernameInput')
 let passWord = document.getElementById('passwordInput')
+
 const loginForm = document.getElementById('loginForm')
+
+
+// Create Account Code
+
 
 async function sendData(username, password) {
     console.log('Post Requested');
@@ -12,7 +17,7 @@ async function sendData(username, password) {
     console.log('Form data value:', formData);
 
     try {
-        const response = await fetch('/NodeServer/login', {
+        const response = await fetch('/NodeServer/server.mjs/createAcc', {
             method: 'POST',
             body: formData,
             headers: {
@@ -39,12 +44,25 @@ loginForm.addEventListener('submit', async (e) => {
 
     const userNparcel = userName.value;
     const passWparcel = passWord.value;
+  
+
     console.log(userNparcel);
     console.log(passWparcel);
 
     // Send the form data to the server
     await sendData(userNparcel, passWparcel);
+    clearInput()
+})
+    
 });
 
 
-})
+function clearInput() { 
+    userName = null;
+    passWord = null
+   
+}
+
+
+
+

@@ -30,13 +30,14 @@
 
     <div id="wrapper"></div>
     
-    <form id="loginForm" method="get"> 
+    <form id="loginForm" method="post"> 
 
-            <header id="loginHead">Sign In</header>
+            <header id="loginHead">Sign Up</header>
         <input type="text" placeholder="Username" id="usernameInput" name="username" autocomplete="off"> 
-        <input type="password" placeholder="Password" id="passwordInput" name="password"> 
+        <input type="password" placeholder="Password" id="passwordInput" name="password">
+        <input type="password" placeholder="Confirm Password" id="confirmPassword" name="confirmPassword">
         <button type="submit" id="enterBtn" name="enterButton">Sign in</button>
-        <li><a href="createacc.html" id="noacc">No Account? Sign Up here</a></li>
+        <li><a href="createacc.html" id="noacc">Already have a Account? Login</a></li>
     </form>
     
 </body>
