@@ -7,3 +7,8 @@ document.addEventListener('DOMContentLoaded', e => {
 function openSettings() { 
     window.open('Settings/settings.html');
 }
+const userProfBtn = document.getElementById('userProfile')
+
+function openProfile() { 
+    window.open("../Account/createAcc.html");
+}

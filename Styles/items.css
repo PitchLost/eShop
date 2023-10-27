@@ -11,9 +11,8 @@
 }
 .stockPrice { 
     position: relative;
-    top: 0%;
+    top: 3em;
     display: flex;
-    margin-bottom: -5em;
 }
 
 
