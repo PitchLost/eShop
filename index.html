@@ -19,6 +19,7 @@
     <script defer src="./Scripts/main.js"></script>
     <script defer src="./Search/search.js"></script>
     <script defer src="./Settings/settings.js"></script>
+    <script defer src="./Cart/cart.js" ></script>
     <title>E Shop Template</title>
 </head>
 <body>
@@ -214,7 +215,7 @@
                     </div>
                 </div>
             </div>
-    <script defer src="./Cart/cart.js" ></script>
+
 
     
 
@@ -222,8 +223,9 @@
             <!-- Cart -->
 
             <header id="cartHead">Your Cart</header>
-            <button type="button" class="purchaseBtn">Checkout!</button>
+            <button type="submit" id="purchaseBtn" class="purchaseBtn" >Checkout!</button>
             <!-- Main Cart Container -->
+            <form id='cartForm' method="post">
           <div id="mainCartContainer">
             <!-- Item To append the items to -->
                     <div id="cartItems">
@@ -232,6 +234,8 @@
                      <div id="cartItem3"></div>
                      <div id="cartItem4"></div>
                      <div id="cartItem5"></div>
+                     
+                     </form>
                     </div>
                 </div>
             

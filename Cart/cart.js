@@ -105,3 +105,46 @@ deleteBtn.forEach(button => {
         removeClonedItem(elementToRemove);
     });
 });
+
+
+
+
+// Send Items to server
+
+
+const cartForm = document.getElementById('cartForm')
+
+
+
+
+
+cartForm.addEventListener('submit', async e => {
+  e.console.log('POST Called')
+
+let allItemsInCart = cartItemRow;
+console.log('All the Items in the cart is',allItemsInCart)
+
+try {
+  let cartResponse = await fetch('http://localhost:5500/NodeServer/server.mjs/cart', {
+      method: 'POST',
+      body: allItemsInCart,
+      headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+      }
+  });
+
+  console.log('Promise Activated');
+  
+  if (cartResponse.ok) {
+      console.log('Action seen');
+      console.log('Response is',cartResponse)
+  } else {
+      console.error('ERR 999 Response failed');
+  }
+} catch (error) {
+  console.error('The Post was rejected', error);
+} finally {
+  console.log('The Post was neither rejected nor accepted');
+}
+
+})

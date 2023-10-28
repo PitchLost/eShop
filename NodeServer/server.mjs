@@ -73,3 +73,44 @@ const io = new Server(server, {
 });
 
 server.listen(port, () => console.log(`Server listening on port ${port}`));
+
+
+
+
+
+
+
+// Cart Handle
+
+let cartItemsOnServer = undefined;
+
+
+app.use((req, res, next) => {
+  console.log('Request received:', req.method, req.url);
+  res.header('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+});
+
+// Middleware for parsing form data
+app.use(express.urlencoded({ extended: true }));
+
+// Define the route for handling POST requests
+app.post('/NodeServer/server.mjs/cart', (req, res) => {
+  const clientIP = req.ip;
+  console.log('The incoming req is from', clientIP);
+
+  cartItemsOnServer = req.body;
+  console.log('The Server sees Cart items as:',cartItemsOnServer)
+  console.log('Data received in the request:', dataToSend);
+  console.log(req.body)
+
+  // MongoDB code here
+
+  // Logging the response
+  console.log('Sending response to the client');
+  res.json({ message: 'Received a POST request', data: req.body });
+});
+
+

@@ -1,5 +1,6 @@
 /* Class Customisation */
 
+/* Prices */
 
 .price { 
     display: flex;
@@ -16,6 +17,20 @@
 }
 
 
+/* Item Names */
+
+.itemName { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 6em;
+    font-size: 6mm;
+    color: white; 
+    margin-top: 2em;
+}
+
+
+
 
 
 /* New Arrivals */
@@ -29,7 +44,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: coral;
     opacity: 85%;
 }
 #newArrivedSubHead { 
@@ -50,12 +65,7 @@
     width: 12em;
     height: 12em;
 }
-#arriv1 button,#arriv2 button, #arriv3 button { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+
 
 #arriv1 { 
     margin-left: 5em;
@@ -80,7 +90,7 @@ h3 {
     justify-content: center;
     align-items: center;
     /* Background color for size refernce */
-    background-color: black;
+    background-color: coral;
     opacity: 85%;
     z-index: -1;
 }
@@ -96,7 +106,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     margin-right: 6em;
-    margin-top: 12em;
+    margin-top: 15em;
     width: 12em;
     height: 12em;
 }
@@ -104,12 +114,6 @@ h3 {
     margin-bottom: -5em;
 }
 
-#stock1 button, #stock2 button,#stock3 button, 
-#stock4 button, #stock5 button,#stock6 button,
-#stock7 button, #stock8 button,#stock9 button { 
-    display: flex;
-    justify-content: center;
-    text-align: center;
     
     
 }
@@ -183,7 +187,7 @@ img:hover {
     justify-content: center;
     align-items: center;
     /* Background color for size refernce */
-    background-color: black;
+    background-color: coral;
     opacity: 85%;
     z-index: -1;
 }
@@ -207,12 +211,7 @@ img:hover {
 } 
 
 /* Featured Divs */
-#fet1 button,#fet2 button, #fet3 button { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+
 #fet1 { 
     margin-left: 5em;
 }
@@ -228,3 +227,12 @@ h2 {
 
 
 
+
+
+/* Cart Button Class */
+.cartBtn { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
