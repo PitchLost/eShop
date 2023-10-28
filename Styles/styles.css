@@ -17,6 +17,12 @@ header {
     text-align: center;
 }
 
+
+/* Give the Containers Good Shadows */
+.filler { 
+    box-shadow: 5px 5px 10px 0px black
+}
+
 /* TODO: Make This Pop on the page a bit better as it is difficult to read at the moment */
 
 #mainHeader { 

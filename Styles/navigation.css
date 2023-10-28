@@ -16,6 +16,7 @@ ul {
      list-style: none;
      z-index: 999;
      color: beige;
+     box-shadow: 5px 5px 10px 0px black
 }
 #cartLogo { 
     position: fixed;
@@ -76,9 +77,9 @@ a:hover {
     display: flex;
     align-items: center;
     position: fixed;
-    right: 15%;
+    right: 14.2%;
     height: 2em;
-    width: 12em;
+    width: 11em;
     background-color: transparent;
     border-style: solid;
     border-width: thin;
@@ -102,6 +103,9 @@ a:hover {
     font-size: 7mm;
     background-color: transparent;
     color: white;
+}
+#searchButton:hover { 
+    color: cornflowerblue;
 }
 #pfp { 
     position: fixed;
