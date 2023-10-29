@@ -103,7 +103,7 @@ app.post('/NodeServer/server.mjs/cart', (req, res) => {
 
   cartItemsOnServer = req.body;
   console.log('The Server sees Cart items as:',cartItemsOnServer)
-  console.log('Data received in the request:', dataToSend);
+  console.log('Data received in the request:', cartItemsOnServer);
   console.log(req.body)
 
   // MongoDB code here

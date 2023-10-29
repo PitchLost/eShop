@@ -43,12 +43,15 @@
     position: absolute;
     top:600%;
     left:60%;
-    z-index: 999;
+    z-index: 9999999;
     background-color: black;
     width: 5em;
     height: 4em;
     display: flex;
     text-align: center;
+}
+.purchaseBtn:active { 
+    background-color: coral;
 }
 #cartItems img { 
    
