@@ -15,6 +15,7 @@
 // If the error still does not show up kinda fucked after that
 
 
+//* ERRCOM IS FOR REFERENCE!!!! */
 
 
 // Delete Buttons
@@ -29,6 +30,27 @@ let cartItemRow = document.getElementById('cartItems'); // Assuming 'cartItems' 
 let clonedItems = [];
 
 let itemCounter = 0
+
+// ! TESTING AHEAD 
+
+// Declare a empty array to store the items in cart name 
+
+let cartedItemName = [] 
+
+// The same for price
+
+let cartedItemPrice = []
+
+// Same for Image 
+
+// This one is a little harder since its not innerText but figure out later. 
+// Might be easier not to have the image at all tbh
+
+let cartedItemImage = []
+
+//! TESTING DONE
+
+
 
 
 
@@ -152,50 +174,45 @@ deleteBtn.forEach(button => {
 
 
 
-
-
-
-//* Send Items to server
-
-
-const cartForm = document.getElementById('cartForm')
-const cartSubmit = document.getElementById('purchaseBtn')
-
-
-
-
+// When the form is submitted
 cartForm.addEventListener('submit', async e => {
-  
-// ** ERRCOM 
+  e.preventDefault(); // This shouldnt submit the cart if its empty but likely does not work since its not exactly a 'form'
 
-let allItemsInCart = cartItemRow;
-console.log('All the Items in the cart is',allItemsInCart)
+  // Read the elements from the DOM and store them in the cartItems variable
+  const cartItems = [];
 
+  // Define a variable for the cloned items
 
-//** ERRCOM 
+  // We have to clone the items so they don't just append out of the cart and end up in the checkout with nothing left in the cart.
+  // Pretty much just for usability but pretty simple so no reason not to do it
 
+  let clonedItems = [];
 
-try {
-  let cartResponse = await fetch('http://localhost:5500/NodeServer/server.mjs/cart', {
-      method: 'POST',
-      body: allItemsInCart,
-      headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-      }
+  // Loop through the cart elements | Not 100% sure what this does but I think it loops through each item until it finds the one that needs extracting
+  clonedItems.forEach(item => {
+    const itemData = {
+      // Extract item details (e.g., name, price, quantity) from the item
+
+    };
+    cartItems.push(itemData);
   });
 
-  console.log('Promise Activated');
-  
-  if (cartResponse.ok) {
-      console.log('Action seen');
-      console.log('Response is',cartResponse)
-  } else {
-      console.error('ERR 999 Response failed');
-  }
-} catch (error) {
-  console.error('The Post was rejected', error);
-} finally {
-  console.log('The Post was neither rejected nor accepted');
-}
+  // Send the cart items as JSON to the server
+  try {
+    const cartResponse = await fetch('http://localhost:5500/NodeServer/server.mjs/cart', {
+      method: 'POST',
+      body: JSON.stringify(cartItems), // Convert to JSON
+      headers: {
+        'Content-Type': 'application/json', // Use JSON content type
+      },
+    });
 
-})
+    if (cartResponse.ok) {
+      console.log('Cart submitted successfully.');
+    } else {
+      console.error('Cart submission failed.');
+    }
+  } catch (error) {
+    console.error('The POST request was rejected:', error);
+  }
+});

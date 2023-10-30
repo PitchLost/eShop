@@ -1,3 +1,15 @@
+//!(index):6587 crbug/1173575, non-JS module files deprecated.
+
+// Possible suspects in this code: 
+
+// The in depth error in the network tab indicates that it is a CORS issue but That may be wrong 
+
+// It could be that CORS is only allowing /Account/createAcc.js to send requests to the server. 
+
+// Fuck knows tbh
+
+
+
 import express from 'express';
 import http from 'http';
 import { Server } from 'socket.io';
@@ -15,7 +27,7 @@ const port = 5500;
 
 // Enable CORS middleware
 app.use(cors({
-  origin: 'http://127.0.0.1:5500/Login/createAcc.js', 
+  origin: 'http://127.0.0.1:5500', 
   methods: 'GET, POST, OPTIONS', 
   allowedHeaders: 'Content-Type, my-custom-header', 
   credentials: true,  
