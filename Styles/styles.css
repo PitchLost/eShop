@@ -16,6 +16,30 @@ header {
     display: flex;
     text-align: center;
 }
+#scrollToBottom { 
+    position: fixed;
+    top:20%;
+    left:0%;
+    z-index: 9999999999;
+    width: 35%;
+    height: 10%;
+}
+#scrollToTop { 
+    position: fixed;
+    top:10%;
+    left:0%;
+    z-index: 9999999998;
+    width: 35%;
+    height: 10%;
+}
+#refresh { 
+    position: fixed;
+    top:30%;
+    left:0%;
+    z-index: 9999999997;
+    width: 35%;
+    height: 10%;
+}
 
 
 /* Give the Containers Good Shadows */
@@ -67,6 +91,12 @@ img,button {
 #searchButton { 
     box-shadow: 0px 0px 0px 0px;
 }
+
+
+
+
+
+
 
 
 

@@ -177,38 +177,50 @@ deleteBtn.forEach(button => {
 // When the form is submitted
 cartForm.addEventListener('submit', async e => {
   e.preventDefault(); // This shouldnt submit the cart if its empty but likely does not work since its not exactly a 'form'
-
-  // Read the elements from the DOM and store them in the cartItems variable
-  const cartItems = [];
+  console.log('POST CALLED')
+  // Read the elements from the DOM and store them in the cartArray variable
+  const cartArray = [];
 
   // Define a variable for the cloned items
 
   // We have to clone the items so they don't just append out of the cart and end up in the checkout with nothing left in the cart.
   // Pretty much just for usability but pretty simple so no reason not to do it
 
-  let clonedItems = [];
+  
+// Loop through the cloned items and extract data
+cartArray.forEach(item => {
+  // Assuming you have elements with class names like '.name', '.price', '.quantity' within 'item'
+  const itemName = document.querySelector('.name').textContent;
+  const itemPrice = document.querySelector('.price').textContent;
+  const itemQuantity = document.querySelector('.quantity').textContent;
 
-  // Loop through the cart elements | Not 100% sure what this does but I think it loops through each item until it finds the one that needs extracting
-  clonedItems.forEach(item => {
-    const itemData = {
-      // Extract item details (e.g., name, price, quantity) from the item
 
-    };
-    cartItems.push(itemData);
-  });
+  const itemData = {
+    name: itemName,
+    price: itemPrice,
+    quantity: itemQuantity,
+  };
+  console.log('itemData',itemData)
+
+  cartArray.push(itemData);
+  console.log('cartArray:',cartArray)
+});
+
+
 
   // Send the cart items as JSON to the server
   try {
     const cartResponse = await fetch('http://localhost:5500/NodeServer/server.mjs/cart', {
       method: 'POST',
-      body: JSON.stringify(cartItems), // Convert to JSON
+      body: JSON.stringify(cartArray), // Convert to JSON
       headers: {
         'Content-Type': 'application/json', // Use JSON content type
       },
     });
 
     if (cartResponse.ok) {
-      console.log('Cart submitted successfully.');
+      console.log('Cart submitted successfully.', 'The Items Submited were',JSON.stringify(clonedItems));
+      
     } else {
       console.error('Cart submission failed.');
     }

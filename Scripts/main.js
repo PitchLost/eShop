@@ -32,3 +32,8 @@ function scrollToTop() {
 function refreshPage() { 
     location.reload();
 }
+
+
+function scrollToCart() { 
+    scrollToBottom()
+}
