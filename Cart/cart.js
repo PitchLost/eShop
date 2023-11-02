@@ -1,18 +1,6 @@
 //* Errors
 
-//! (index):6587 crbug/1173575, non-JS module files deprecated. 
-// This error comes after the click of the purchase button for the cart. 
-// I believe the error is somewhere in this client code and not the server
-// Clear code to be marked with //** ERRCOM */
-
-
-// After Testing
-
-// Seems that the error may not be in the client code and instead somewhere on the server side.
-// Will need to look into further
-// If the error cannot be found a thorough search of the entire project will need to occur. 
-// This means that all javascript files or modular javascript files will need to be searched.
-// If the error still does not show up kinda fucked after that
+//! Only unexpected behaviour I am experiencing at the moment is the package sent being empty.
 
 
 //* ERRCOM IS FOR REFERENCE!!!! */
@@ -48,15 +36,20 @@ let cartedItemPrice = []
 
 let cartedItemImage = []
 
+let cartArray = [];
+
+
+let dupeItem = rowContents.cloneNode(true); 
+
 //! TESTING DONE
 
 
 
 
 
-// ! EXPERERIMENTAL !!!! 
+// Define elements to append the cart items to
 
-//** ERRCOM 
+ 
 
 let cartItem1 = document.getElementById('cartItem1');
 let cartItem1filled = false;
@@ -71,14 +64,15 @@ let cartItem5filled = false;
 
 
 
-//** ERRCOM 
+ 
 
 // Add event listener to each "Add to Cart" button
 addBtn.forEach(button => {
   button.addEventListener('click', e => { 
     let activeBtn = e.target;
     let rowContents = activeBtn.parentElement;
-    let dupeItem = rowContents.cloneNode(true); 
+    dupeItem = rowContents.cloneNode(true); 
+    
 
  // Set CSS styles to control the layout
  dupeItem.style.display = 'flex'; // Display items in a flex container
@@ -90,7 +84,7 @@ addBtn.forEach(button => {
 // Keep track of the amount of items in the cart and append each row.
 
 
-//** ERRCOM 
+ 
 
  if (cartItem1filled == false) { 
   cartItem1.appendChild(dupeItem);
@@ -130,11 +124,30 @@ addBtn.forEach(button => {
   console.log('The amount of items in the cart is',itemCounter)
  }
  
+
+// Prepare the items for the POST
+
+ const itemName = document.querySelector('.name').textContent;
+ const itemPrice = document.querySelector('.price').textContent;
+ const itemQuantity = document.querySelector('.quantity').textContent;
+
+
+ const itemData = {
+   name: itemName,
+   price: itemPrice,
+   quantity: itemQuantity,
+ };
+ console.log('itemData',itemData)
+
+ cartArray.push(itemData);
+ console.log('cartArray:',cartArray)
+});
+
    
    
 
 
-   //** ERRCOM
+   
 
     // Store a reference to the cloned item in the array
     clonedItems.push(dupeItem);
@@ -150,7 +163,7 @@ addBtn.forEach(button => {
       removeClonedItem(dupeItem);
     });
   });
-});
+
 
 
 // Function to remove a cloned item
@@ -178,8 +191,7 @@ deleteBtn.forEach(button => {
 cartForm.addEventListener('submit', async e => {
   e.preventDefault(); // This shouldnt submit the cart if its empty but likely does not work since its not exactly a 'form'
   console.log('POST CALLED')
-  // Read the elements from the DOM and store them in the cartArray variable
-  const cartArray = [];
+
 
   // Define a variable for the cloned items
 
@@ -188,24 +200,8 @@ cartForm.addEventListener('submit', async e => {
 
   
 // Loop through the cloned items and extract data
-cartArray.forEach(item => {
-  // Assuming you have elements with class names like '.name', '.price', '.quantity' within 'item'
-  const itemName = document.querySelector('.name').textContent;
-  const itemPrice = document.querySelector('.price').textContent;
-  const itemQuantity = document.querySelector('.quantity').textContent;
 
-
-  const itemData = {
-    name: itemName,
-    price: itemPrice,
-    quantity: itemQuantity,
-  };
-  console.log('itemData',itemData)
-
-  cartArray.push(itemData);
-  console.log('cartArray:',cartArray)
-});
-
+ 
 
 
   // Send the cart items as JSON to the server
