@@ -12,3 +12,28 @@ const userProfBtn = document.getElementById('userProfile')
 function openProfile() { 
     window.open("../Account/createAcc.html");
 }
+
+// Button to scroll to the bottom cause it takes so FUCKING long
+
+function scrollToBottom() { 
+    const bottomOfPage = document.getElementById('cartItems')
+    bottomOfPage.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Button to scroll to the Top since it also takes so FUCKING long 
+
+function scrollToTop() { 
+    const topOfPage = document.getElementById('mainHeader')
+    topOfPage.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Button to refresh Page 
+
+function refreshPage() { 
+    location.reload();
+}
+
+
+function scrollToCart() { 
+    scrollToBottom()
+}

@@ -79,7 +79,7 @@ a:hover {
     position: fixed;
     right: 14.2%;
     height: 2em;
-    width: 11em;
+    width: 2em;
     background-color: transparent;
     border-style: solid;
     border-width: thin;
@@ -88,6 +88,9 @@ a:hover {
 }
 #searchBar::placeholder { 
     color: white;
+}
+#searchBar:focus { 
+    width: 8em;
 }
 
 #searchForm { 

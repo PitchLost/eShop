@@ -34,7 +34,12 @@
 <!-- Header -->
 <header id="frontHeader">E Commerce Shop</header>
 
-
+<!-- ! Dev tools -->
+<div id="devTools">
+<button type="button" id="scrollToTop" onclick="scrollToTop()">To Top</button>
+<button type="submit" id="refresh" onclick="refresh()">Refresh</button>
+<button type="button" id="scrollToBottom" onclick="scrollToBottom()">To Bottom</button>
+</div>
 
 <!-- General Divs -->
 
@@ -47,7 +52,7 @@
         <li><a href="#mainStock">Our Products</a></li>
         <li><a href="/About-Us/about.html">About Us</a></li>
         <li><a href="/Privacy-Policy/about-privacy.html">Privacy</a></li>
-        <button id="cart"><i id="cartLogo" class="fa-solid fa-cart-shopping"></i></button>
+        <button id="cart"><i id="cartLogo" class="fa-solid fa-cart-shopping" onclick="scrollToCart()"></i></button>
         <button id="settingsBtn" type="button"><i id="settingsLogo" class="fa-solid fa-gears" onclick="openSettings()"></i></button>
         <p id="navText">Little Bit Of Everything</p>
         <i id="navLogo" class="fa-solid fa-chart-simple"></i>
@@ -228,30 +233,35 @@
                     </div>
                 </div>
             </div>
-
-
-    
+            </div>
+            </div>
+            </div>
+            
 
 
             <!-- Cart -->
 
-            <header id="cartHead">Your Cart</header>
+            
            
             <!-- Main Cart Container -->
             <form id='cartForm' method="post">
-                <button type="submit" id="purchaseBtnID" class="purchaseBtn" >Checkout!</button>
+               
           <div id="mainCartContainer">
+
+            <!-- Button And Header -->
+            <header id="cartHead">Your Cart</header>
+            <button type="submit" id="purchaseBtnID" class="purchaseBtn" >Checkout!</button>
+            </div>
+
             <!-- Item To append the items to -->
                     <div id="cartItems">
-                     <div id="cartItem1"></div>
-                     <div id="cartItem2"></div>
-                     <div id="cartItem3"></div>
-                     <div id="cartItem4"></div>
-                     <div id="cartItem5"></div>
+                     <div id="cartRows">
+                        <!-- Empty div Since I will be appending stuff to it -->
+                     </div>
                      
                      </form>
                     </div>
-                </div>
+                
             
 
         
@@ -262,7 +272,7 @@
 
 
 
- </div>
+ 
 
 
 
