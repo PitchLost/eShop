@@ -115,16 +115,23 @@
 
 #cartRows img, #cartRows button, #cartRows p { 
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    text-align: center;
+    justify-content: center;
     align-items: center;
-    width: 3em;
-    height: 3.5em;
-    font-size: 4mm;
+    text-align: center;
+    flex-direction: row;
+    width: 4em;
+    height: 4.5em;
+    font-size: 5mm;
     color: white;
+    margin-left: 17%;
+    margin-top: 1%;
 }
 #cartRows button { 
     width: 4em;
     height: 2em;
+    background-color: red;
+    color: white;
+}
+#cartRows p { 
+    padding-bottom: 3em;
 }
