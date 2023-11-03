@@ -75,7 +75,7 @@
 
 .purchaseBtn { 
     position: absolute;
-    top:90%;
+    top:60%;
     z-index: 9999999;
     background-color: coral;
     width: 65%;
@@ -106,7 +106,25 @@
 #cartRows { 
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 7%;
+    height: 50%;
     background-color: blue;
+    z-index: -1;
+}
+
+#cartRows img, #cartRows button, #cartRows p { 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    width: 3em;
+    height: 3.5em;
+    font-size: 4mm;
+    color: white;
+}
+#cartRows button { 
+    width: 4em;
+    height: 2em;
 }
