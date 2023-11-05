@@ -103,6 +103,10 @@
     text-align: center;
 }
 
+
+/* TODO:  The Text that appends to the cart isnt flexing correctly and is instead going ontop of eachother instead of next to each other.
+*/
+
 #cartRows { 
     display: flex;
     justify-content: center;
@@ -131,7 +135,10 @@
     height: 2em;
     background-color: red;
     color: white;
+    margin-top: 1.3em;
 }
 #cartRows p { 
-    padding-bottom: 3em;
+    flex-direction:row;
+    margin-left: 4em;
+    padding: 2em;
 }
