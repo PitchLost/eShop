@@ -8,6 +8,12 @@ let cartArray = [];
 // Define a variable to assign the item being added to:
 let itemBeingAdded = undefined;
 
+
+// Define a variable to track the size of the cart
+
+let cartSize = cartArray.length
+
+
 // Define the callers (buttons):
 const addToCartBtns = document.querySelectorAll('.cartBtn');
 // Main Function to add the item
@@ -26,18 +32,14 @@ addToCartBtns.forEach(function (button) {
         console.log('Item added:', itemBeingAdded, 'Cart Array:', cartArray);
 
         // Append the item to cartRows
-        if (cartRows.children.length > 0) {
-            cartRows.insertBefore(itemBeingAdded, cartRows.children[0]);
-        } else {
-            cartRows.appendChild(itemBeingAdded);
-        }
-        
+      cartRows.appendChild(itemBeingAdded.cloneNode(true))
        
        // Logs
        
         console.log('Cart Item appended')
         console.log('Add to cart complete')
         console.log('cartArray:',cartArray)
+        console.log('The size of the array:',cartSize)
       
     });
 });
@@ -89,6 +91,7 @@ cartRows.addEventListener('click', (e) => {
 
         // Log The array after the element has been removed: 
         console.log('cartArray:',cartArray)
+        
         
     }}})
     

@@ -1,15 +1,4 @@
 
-#cartItems button { 
-    width: 5em;
-    height: 3em;
-    position: absolute;
-    left:30%;
-    top:25%;
-    display: flex;
-    flex-direction: column;
-    visibility: visible ;
-
-}
 
 
 /* Cart */
@@ -29,16 +18,6 @@
     flex-direction: column;
 }
 
-#cartItems img { 
-   
-    width: 7em;
-    height: 7em;
-    position: absolute;
-    left: 10%;
-    top: 20%;
-    display: flex;
-    flex-direction: column;
-}
 
 .cartRemove { 
     display: none;
@@ -100,23 +79,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100%;
     background-color:  transparent;
     z-index: -1;
     padding: 10px; 
 }
+
+/* Set cart Button to invis */
+#cartRows .cartBtn {
+    display: none;
+}
+
+/* Set the Remove item button visible */
+#cartRows .cartRemove { 
+    display: flex;
+    visibility: visible;
+}
+
+#cartRows div { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
 #cartRows img, #cartRows button, #cartRows p { 
-    display: inline;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column; 
+    text-align: center;
     width: 4em;
     height: 4.5em;
-    font-size: 5mm;
+    font-size: 7mm;
     color: black;
-    margin: 10px; 
-    margin-bottom: 10em; /* This Should make the new items stack below it */
+    margin: 20px; 
     
+}
+#cartRows img { 
+    gap: 2em;
 }
 #cartRows button { 
     width: 4em;
@@ -124,15 +126,9 @@
     background-color: red;
     color: white;
     margin-top: 1.3em;
-}
-#cartRows button:hover { 
-    background-color: beige;
-    color: red;
+    z-index: 999;
 }
 
-#cartRows p { 
-    margin: 0;
-}
 
 #cartRows .price { 
     display: flex;
