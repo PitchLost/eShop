@@ -243,3 +243,32 @@ h2 {
 
 
 
+
+
+/* ! Main Stock Section */
+/* All Styling for the main stock should be here. Note that there may be some general styling that affects it still */
+/* Instead of going for the least amount of code in this section I will be going for readibility. Single Item styling only! */
+
+/* Stock Group 1 stlyes */
+
+#stockGroup1 { 
+    display: flex;
+    flex-direction: row;
+   
+}
+
+/* Stock Group 2 Styles */
+#stockGroup2 { 
+    display: flex;
+    flex-direction: row;
+}
+/* Stock Group 3 styles */
+#stockGroup3 { 
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+
+
